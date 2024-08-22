@@ -4,7 +4,7 @@ Welcome to my Freelance Experience repository! This repository provides a compre
 
 ## Table of Contents
 
-- [Project 4: **GCM Project**](#project-4-gcm)
+- [Project 4: **GCM Project**](#gcm)
 - [Project 4: **Gazl**](#gazl)
 - [Project 2: **Arrafni**](#arrafni)
 - [Project 1: **Mulham**](#mulham)
@@ -12,7 +12,7 @@ Welcome to my Freelance Experience repository! This repository provides a compre
 
 ---
 
-## Project 4: **GCM**
+## GCM
 
 ### Description
 
