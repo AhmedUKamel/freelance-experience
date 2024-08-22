@@ -1,2 +1,98 @@
-# freelance-experience
-This repository provides a detailed overview of my professional work experience and the freelance projects I have developed.
+# Freelance Experience
+
+Welcome to my Freelance Experience repository! This repository provides a comprehensive overview of the professional work and freelance projects I have developed over the years. Each project includes detailed descriptions, technical specifications, and relevant resources to help you explore my work.
+
+## Table of Contents
+
+- [Project 4: **GCM Project**](#project-4-gcm)
+- [Project 4: **Gazl**](#gazl)
+- [Project 2: **Arrafni**](#arrafni)
+- [Project 1: **Mulham**](#mulham)
+- [Contact](#contact)
+
+---
+
+## Project 4: **GCM**
+
+### Description
+
+A platform built for "Global Clear Mission", a construction waste management company in Saudi Arabia It centralizes the management of resources, services, orders, clients, and documents, streamlining operations for their waste recycling services in the construction sector.
+
+### Duration
+
+- **Start Date:** August 2024
+- **End Date:** Current working on
+
+### Database Schema
+
+![Database Schema](gcm/schema.svg)
+
+[Schema SQL File](gcm/schema.sql)
+
+### Screenshots
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <img src="gcm/gcm-image-01.png" width="30%" alt="image">
+    <img src="gcm/gcm-image-02.png" width="30%" alt="image">
+    <img src="gcm/gcm-image-03.png" width="30%" alt="image">
+    <img src="gcm/gcm-image-04.png" width="30%" alt="image">
+    <img src="gcm/gcm-image-05.png" width="30%" alt="image">
+</div>
+
+### Tools, Technologies, and Architecture
+
+- **Tools:** Intellij Ultimate Edition, Docker, Git, dbdiagram.io
+- **Technologies:** Java 17, Spring Boot, Spring Security, Spring Data JPA
+- **System Architecture:** RESTful API
+
+### Requirements/Features
+
+- Feature 1: Description
+
+### External Links
+
+- [Docker Image](https://hub.docker.com/r/ahmedukamel/gcm_project)
+- [API Documentation](https://documenter.getpostman.com/view/26297954/2sA3s6EVCo)
+
+### Related Repositories
+
+- [Frontend Repository](https://github.com/username/frontend-repo)
+
+### Installation and Usage Guide
+
+#### Prerequisites
+
+- Docker installed
+
+#### Installation Steps
+
+1. **Create the docker compose file:**
+
+   ```bash
+   pending
+   ```
+
+2. **Start the Frontend and Backend:**
+
+**Linux:**
+
+```bash
+docker compose up -d
+```
+
+**Windows:**
+
+```bash
+docker-compose up -d
+```
+
+3. **Access the Application:**
+   - Website: `http://localhost:3010`
+   - Backend API: `http://localhost:8090`
+   - Database: `http://localhost:3316`
+
+---
+
+## Contact
+
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ahmedukamel/) or check out my [GitHub](https://github.com/ahmedukamel) profile for more of my work.
