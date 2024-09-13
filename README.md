@@ -51,8 +51,10 @@ A platform built for "Global Clear Mission", a construction waste management com
 
 ### External Links
 
-- [Docker Image](https://hub.docker.com/r/ahmedukamel/gcm_project)
+- [Backend Docker Image](https://hub.docker.com/r/ahmedukamel/gcm_project)
+- [Frontend Docker Image](https://hub.docker.com/r/abdulrahmanmahmoud/gcm_project)
 - [API Documentation](https://documenter.getpostman.com/view/26297954/2sA3s6EVCo)
+- [UI / UX Design Figma](https://www.figma.com/design/2eNzsuKLqtlswRorfBELDS/GCM-Project?node-id=2021-11418&node-type=frame)
 
 ### Related Repositories
 
@@ -69,7 +71,59 @@ A platform built for "Global Clear Mission", a construction waste management com
 1. **Create the docker compose file:**
 
    ```bash
-   pending
+   version: "3.8"
+
+   services:
+   backend:
+      image: ahmedukamel/gcm_project:latest
+      container_name: gcm_application_backend_container
+      ports:
+         - "8090:8080"
+      environment:
+         - SPRING_DATASOURCE_URL=jdbc:mysql://database:3306/gcm_db
+         - SPRING_DATASOURCE_USERNAME=root
+         - SPRING_DATASOURCE_PASSWORD=SomeStrongPass#123
+      networks:
+         - gcm_application_network
+      volumes:
+         - ./files/:/app/files
+      depends_on:
+         database:
+         condition: service_healthy
+
+   frontend:
+      image: abdulrahmanmahmoud/gcm_project:latest
+      container_name: gcm_application_frontend_container
+      ports:
+         - "3010:3000"
+      environment:
+         - NEXT_PUBLIC_BACKEND_BASE_URL=http://backend:8080
+      networks:
+         - gcm_application_network
+      depends_on:
+         - backend
+
+   database:
+      image: mysql:latest
+      container_name: gcm_application_database_container
+      ports:
+         - "3316:3306"
+      environment:
+         - MYSQL_DATABASE=gcm_db
+         - MYSQL_ROOT_PASSWORD=SomeStrongPass#123
+      networks:
+         - gcm_application_network
+      volumes:
+         - ./database/:/var/lib/mysql
+      healthcheck:
+         test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+         retries: 10
+         interval: 3s
+         timeout: 30s
+
+   networks:
+   gcm_application_network:
+      name: gcm_application_network
    ```
 
 2. **Start the Frontend and Backend:**
